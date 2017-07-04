@@ -54,16 +54,24 @@ module.exports = {
                     emitWarning: true,
                 },
             },
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    minimize: true,
+                },
+            },
         ],
     },
     plugins: [
         new BabiliPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-        }),
-        // new webpack.HotModuleReplacementPlugin(),   // HMR --hot
-        // new HtmlWebpackPlugin({
-        //     title: 'Webpack demo',
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'main',
         // }),
+        // new webpack.HotModuleReplacementPlugin(),   // HMR --hot
+        new HtmlWebpackPlugin({
+            title: 'React Demo',
+            template: './app/index.html',
+        }),
     ],
 };

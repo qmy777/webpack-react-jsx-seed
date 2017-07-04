@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --devtool eval --progress --colors",
+    "build": "webpack --devtool eval --progress --colors --content-base build",
     "dev": "webpack-dev-server --hot --devtool eval --progress --colors --content-base build"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "eslint-loader": "^1.8.0",
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
+    "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.29.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
