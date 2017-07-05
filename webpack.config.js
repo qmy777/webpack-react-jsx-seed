@@ -71,7 +71,7 @@ module.exports = {
         // new webpack.HotModuleReplacementPlugin(),   // HMR --hot
         new HtmlWebpackPlugin({
             title: 'React Demo',
-            template: './app/index.html',
+            // template: './app/index.html',
         }),
     ],
 };
